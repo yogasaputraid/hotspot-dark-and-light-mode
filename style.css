@@ -300,30 +300,32 @@ iframe {
 .table td,
 .table th {
   padding: 5px;
-  border: 1px !important;
+  border: 1px solid rgb(121, 111, 111) !important;
 }
-.table td,
-th,
-a {
+
+.table td, th, a{
   text-decoration: none;
 }
 
 .table2 {
-  width: 95%;
+  width: 100%;
   border-collapse: collapse !important;
-  text-align: left;
-  font-size: 12px;
+  text-align:left;
 }
 .table2 td,
 .table2 th {
   padding: 5px;
-  border: 1px !important;
+  border: 1px solid rgb(121, 111, 111) !important;
 }
-.table2 td,
-th,
-a {
+
+.table2 td, th, a{
   text-decoration: none;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  }
 
 @keyframes fadein {
   from {

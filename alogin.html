@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title id="title"></title>
-    <meta http-equiv="refresh" content="2; url=$(link-redirect)" />
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="theme-color" content="#3B5998" />
-    <meta
-      name="viewport"
-      content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script language="JavaScript">
+<head>
+<title id="title"></title>
+<meta http-equiv="refresh" content="2; url=$(link-redirect)">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="theme-color" content="#3B5998" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="style.css">
+<script language="JavaScript">
 
-         function startClock() {
-             $(if popup == 'true')
-             open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
-      $(endif)
-      location.href = './success.html';
-         }
-    </script>
-  </head>
-  <body onLoad="startClock()">
-    <table width="100%" height="100%">
-      <tr>
-        <td align="center" valign="middle">
-          Anda telah terhubung
-          <br /><br />
-          Jika belum, <a style="color: blue" href="./login">klik di sini</a>
-        </td>
-      </tr>
-    </table>
-    <script type="text/javascript">
-      document.getElementById("title").innerHTML =
-        window.location.hostname + " > redirect";
+    function startClock() {
+        $(if popup == 'true')
+        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+	$(endif)
+	location.href = './success.html';
+    }
 
-      const toggleSwitch = document.querySelector(
-        '.theme-switch input[type="checkbox"]'
-      );
-      const currentTheme = localStorage.getItem("theme");
+</script>
+</head>
+<body onLoad="startClock()">
+<table width="100%" height="100%">
+<tr>
+	<td align="center" valign="middle">
+	Anda telah terhubung
+	<br><br>
+	Jika belum, <a style="color:blue" href="./login">klik di sini</a></td>
+</tr>
+</table>
+<script type="text/javascript">
+	document.getElementById('title').innerHTML = window.location.hostname + " > redirect";
+	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
 
-      if (currentTheme) {
-        document.documentElement.setAttribute("data-theme", currentTheme);
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
 
-        if (currentTheme === "dark") {
-          toggleSwitch.checked = true;
-        }
-      }
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {        document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+    }    
+}
 
-      function switchTheme(e) {
-        if (e.target.checked) {
-          document.documentElement.setAttribute("data-theme", "dark");
-          localStorage.setItem("theme", "dark");
-        } else {
-          document.documentElement.setAttribute("data-theme", "light");
-          localStorage.setItem("theme", "light");
-        }
-      }
-
-      toggleSwitch.addEventListener("change", switchTheme, false);
-    </script>
-  </body>
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+</body>
 </html>
