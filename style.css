@@ -312,6 +312,7 @@ a {
   width: 95%;
   border-collapse: collapse !important;
   text-align: left;
+  font-size: 12px;
 }
 .table2 td,
 .table2 th {

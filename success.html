@@ -10,12 +10,12 @@ $(if refresh-timeout)
 <script>
 	setTimeout(function(){
 	location.href = './status';
-	},4000)
+	},10000000)
 </script>
 $(endif)
 </head>
 <body>
-<div class="main">
+<div class="body">
 
 $(if login-by == 'trial')
 		<div style="margin-top:20px; text-align: center;"><h3>Welcome</h3><i style="font-size:150px;" class="icon icon-user-circle-o">&#xf2be;</i> <h3>trial user</h3></div><br>
@@ -27,7 +27,32 @@ $(endif)
 </div>
 <script type="text/javascript">
 	document.getElementById('title').innerHTML = window.location.hostname + " > success";	
-    document.getElementById('dname').innerHTML = window.location.hostname;	
+    document.getElementById('dname').innerHTML = window.location.hostname;
+
+	const toggleSwitch = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
+        const currentTheme = localStorage.getItem("theme");
+
+        if (currentTheme) {
+          document.documentElement.setAttribute("data-theme", currentTheme);
+
+          if (currentTheme === "dark") {
+            toggleSwitch.checked = true;
+          }
+        }
+
+        function switchTheme(e) {
+          if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", switchTheme, false);
 </script>
 </body>
 </html>

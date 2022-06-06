@@ -31,7 +31,7 @@ $(endif)
 </script>
 </head>
 <body $(if advert-pending == 'yes')	onLoad="openAdvert()" $(endif) >
-<div class="main">
+<div class="body">
 <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
 
 $(if login-by == 'trial')
@@ -80,6 +80,31 @@ $(endif)
     var getvalid = url+usr+"&session="+SessionName
     document.getElementById('exp').src = getvalid;
 */
+
+const toggleSwitch = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
+        const currentTheme = localStorage.getItem("theme");
+
+        if (currentTheme) {
+          document.documentElement.setAttribute("data-theme", currentTheme);
+
+          if (currentTheme === "dark") {
+            toggleSwitch.checked = true;
+          }
+        }
+
+        function switchTheme(e) {
+          if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", switchTheme, false);
 </script>
 </body>
 </html>
