@@ -1,0 +1,1 @@
+# hotspot-dark-and-light-mode
