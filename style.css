@@ -26,7 +26,7 @@ body {
   background-color: var(--bg-color);
   color: var(--font-color);
   margin: 0 auto;
-  font-size: calc(1rem + 0.25vh);
+  font-size: 0.875rem;
   max-width: 300px;
   height: 100%;
   border-radius: 10px;
@@ -197,34 +197,28 @@ iframe {
 }
 
 .username {
-  background-color: #fdfbfb;
   border: none;
   border-radius: 3px;
-  border-bottom: 1px solid #f2f2f2;
   text-align: center;
   font-size: 16px;
-  color: #000000;
   outline: none;
   width: 95%;
   height: 35px;
 }
 
 .password {
-  background-color: #fdfbfb;
   border: none;
   border-radius: 0px 0px 3px 3px;
-  border-top: 1px solid #f2f2f2;
   text-align: center;
   font-size: 16px;
-  color: #000000;
   outline: none;
   width: 95%;
   height: 35px;
 }
 
 .button {
-  background-color: #000000;
-  background-image: linear-gradient(#000000, #000000, #000000);
+  background-color: rgb(121, 111, 111);
+  background-image: linear-gradient(rgb(121, 111, 111), rgb(121, 111, 111), rgb(121, 111, 111));
   border: none;
   border-radius: 3px;
   color: #fff;
@@ -269,8 +263,8 @@ iframe {
 }
 
 .small-button {
-  background-color: #000000;
-  background-image: linear-gradient(#000000, #000000, #000000);
+  background-color: rgb(121, 111, 111);
+  background-image: linear-gradient(rgb(121, 111, 111), rgb(121, 111, 111), rgb(121, 111, 111));
   border: none;
   border-radius: 3px;
   color: #fff;
