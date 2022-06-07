@@ -1,5 +1,6 @@
 # hotspot-dark-and-light-mode
 Source: https://www.youtube.com/watch?v=Sz6488h4Kq0&t=696s
+and Thanks to : https://github.com/laksa19
 
 ## Membuat login Member menjadi default
 Edit file login.html di baris 14 menjadi 
