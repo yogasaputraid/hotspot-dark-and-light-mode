@@ -1,5 +1,5 @@
 # hotspot-dark-and-light-mode
-Credits: 
+Source and credits: 
 <br>https://www.youtube.com/watch?v=Sz6488h4Kq0&t=696s
 <br>https://github.com/laksa19
 <br>https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
