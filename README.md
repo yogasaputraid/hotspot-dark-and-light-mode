@@ -1,6 +1,10 @@
 # hotspot-dark-and-light-mode
-Source: https://www.youtube.com/watch?v=Sz6488h4Kq0&t=696s
-<br> and Thanks to : https://github.com/laksa19
+Credits: 
+<br>https://www.youtube.com/watch?v=Sz6488h4Kq0&t=696s
+<br>https://github.com/laksa19
+<br>https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+
+
 
 ## Membuat login Member menjadi default
 Edit file login.html di baris 14 menjadi 
