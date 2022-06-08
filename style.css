@@ -9,61 +9,40 @@
 [data-theme="dark"] {
   --primary-color: #9a97f3;
   --secondary-color: #818cab;
-  --font-color: #ffffff;
+  --font-color: #e1e1ff;
   --bg-color: #161625;
   --heading-color: #818cab;
 }
 
-/* body {
-  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Verdana, Roboto, "helvetica neue", Arial, sans-serif, "apple color emoji";
-  font-size: 14px; 
-  margin: 0;
-} */
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Verdana, Roboto,
     "helvetica neue", Arial, sans-serif, "apple color emoji";
+  font-size: 0.875rem;
+
   background-color: var(--bg-color);
   color: var(--font-color);
+  max-width: 90%;
   margin: 0 auto;
-  font-size: 0.875rem;
-  max-width: 300px;
-  height: 100%;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #f2f2f2;
-  padding: 10px;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-right: auto;
-  transition: 0.3s;
-  text-align: center;
-  min-height: 300px;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari and Chrome */
-  -o-animation: fadein 1s; /* Opera */
 }
 
-h1 {
+/* h1 {
   color: var(--heading-color);
-  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Verdana, Roboto,
-    "helvetica neue", Arial, sans-serif, "apple color emoji";
+  font-family: "Sansita One", serif;
   font-size: 2rem;
   margin-bottom: 1vh;
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-}
+font-size: 1.1rem;
+line-height: 1.6rem;
+} */
 
 a {
   color: var(--primary-color);
   text-decoration: none;
   border-bottom: 3px solid transparent;
   font-weight: bold;
+
   &:hover,
   &:focus {
     border-bottom: 3px solid currentColor;
@@ -86,7 +65,7 @@ section {
 nav {
   display: flex;
   justify-content: flex-end;
-  padding: 20px 0;
+  padding: 20px 16px;
 }
 
 /*slider switch css */
@@ -123,7 +102,7 @@ nav {
 }
 
 .slider:before {
-  background-color: #fff;
+  background-color: #9a97f3;
   bottom: 4px;
   content: "";
   height: 26px;
@@ -133,11 +112,11 @@ nav {
   width: 26px;
 }
 
-input:checked + .slider {
-  background-color: #000000;
+input:checked+.slider {
+  background-color: #ffffff;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(26px);
 }
 
@@ -148,6 +127,13 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/* body {
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Verdana, Roboto,
+    "helvetica neue", Arial, sans-serif, "apple color emoji";
+  font-size: 14px;
+  margin: 0;
+} */
 
 @font-face {
   font-family: "fontello";
@@ -184,6 +170,54 @@ iframe {
   width: 100%;
 }
 
+.main {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ccc;
+  padding: 10px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+  text-align: center;
+  min-height: 300px;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari and Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */
+}
+
+.main2 {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ccc;
+  padding: 10px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+  text-align: center;
+  min-height: 300px;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari and Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */
+}
+
 .box {
   margin-bottom: 10px;
   text-align: center;
@@ -197,31 +231,36 @@ iframe {
 }
 
 .username {
+  background-color: #fdfbfb;
   border: none;
   border-radius: 3px;
+  border-bottom: 1px solid #f2f2f2;
   text-align: center;
   font-size: 16px;
+  color: #000000;
   outline: none;
-  width: 95%;
+  width: auto;
   height: 35px;
 }
 
 .password {
+  background-color: #fdfbfb;
   border: none;
   border-radius: 0px 0px 3px 3px;
+  border-top: 1px solid #f2f2f2;
   text-align: center;
   font-size: 16px;
+  color: #000000;
   outline: none;
-  width: 95%;
+  width: auto;
   height: 35px;
 }
 
 .button {
-  background-color: rgb(121, 111, 111);
-  background-image: linear-gradient(rgb(121, 111, 111), rgb(121, 111, 111), rgb(121, 111, 111));
+  background-color: #ccc;
+  background-image: linear-gradient(#ccc, #ccc, #ccc);
   border: none;
   border-radius: 3px;
-  color: #fff;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -231,9 +270,10 @@ iframe {
   margin-top: 10px;
   margin-bottom: 10px;
   cursor: pointer;
-  width: 95%;
-  height: 40px;
+  width: 74%;
+  height: 35px;
 }
+
 .button:hover {
   font-weight: bold;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
@@ -244,7 +284,6 @@ iframe {
   background-image: linear-gradient(#d32f2f, #d32f2f, #d32f2f);
   border: none;
   border-radius: 3px;
-  color: #f2f2f2;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -254,20 +293,20 @@ iframe {
   margin-top: 10px;
   margin-bottom: 10px;
   cursor: pointer;
-  width: 95%;
-  height: 40px;
+  width: 74%;
+  height: 35px;
 }
+
 .button2:hover {
   font-weight: bold;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .small-button {
-  background-color: rgb(121, 111, 111);
-  background-image: linear-gradient(rgb(121, 111, 111), rgb(121, 111, 111), rgb(121, 111, 111));
+  background-color: #ccc;
+  background-image: linear-gradient(#ccc, #ccc, #ccc);
   border: none;
   border-radius: 3px;
-  color: #fff;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -284,74 +323,84 @@ iframe {
   padding: 5px;
   margin-bottom: 10px;
   font-size: 14px;
-  color: #000;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse !important;
 }
+
 .table td,
 .table th {
   padding: 5px;
-  border: 1px solid rgb(121, 111, 111) !important;
+  border: 1px solid !important;
 }
 
-.table td, th, a{
+.table td,
+th,
+a {
   text-decoration: none;
 }
 
 .table2 {
   width: 100%;
   border-collapse: collapse !important;
-  text-align:left;
+  text-align: left;
 }
+
 .table2 td,
 .table2 th {
   padding: 5px;
-  border: 1px solid rgb(121, 111, 111) !important;
+  border: 1px solid !important;
 }
 
-.table2 td, th, a{
+.table2 td,
+th,
+a {
   text-decoration: none;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
-  }
 
 @keyframes fadein {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @-moz-keyframes fadein {
+
   /* Firefox */
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes fadein {
+
   /* Safari and Chrome */
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @-o-keyframes fadein {
+
   /* Opera */
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -359,7 +408,21 @@ iframe {
 
 /* @media */
 @media screen and (max-width: 600px) {
-  .body {
+  .main {
+    width: 90%;
+    margin-top: 2%;
+  }
+}
+
+/* @media */
+@media screen and (min-width: 600px) {
+  .main {
+    margin-top: 2%;
+  }
+
+  /* @media */
+@media screen and (max-width: 600px) {
+  .main2 {
     width: 90%;
     margin-top: 10%;
   }
@@ -367,7 +430,7 @@ iframe {
 
 /* @media */
 @media screen and (min-width: 600px) {
-  .body {
+  .main2 {
     margin-top: 2%;
   }
 }

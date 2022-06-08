@@ -31,7 +31,7 @@ $(endif)
 </script>
 </head>
 <body $(if advert-pending == 'yes')	onLoad="openAdvert()" $(endif) >
-<div class="body2">
+<div class="main2">
 <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
 
 $(if login-by == 'trial')
@@ -57,21 +57,26 @@ $(if blocked == 'yes')
 $(elif refresh-timeout)
 	<tr><td align="right">Refresh <i <i class="icon icon-arrows-cw">&#xe800;</i> </td><td>$(refresh-timeout)</td></tr>
 $(endif)
+
 <!--
     <tr><td align="right">Expired <i <i class="icon icon-calendar">&#xe806;</i> </td><td style="padding-top:0px; padding-left:2px;"><iframe id="exp" frameborder="0" scrolling="no" src="about:blank"></iframe></td></tr>
 -->
+
 </table>
 $(if login-by-mac != 'yes')
 <br>
+
 <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
 <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
 <!-- end of user manager link -->
+
 <button class="button2" type="submit"><i class="icon icon-logout">&#xe804;</i> Logout</button>
 $(endif)
 </form>
 </div>
 <script type="text/javascript">
-    document.getElementById('title').innerHTML = window.location.hostname + " > status";
+    document.getElementById('title').innerHTML = window.location.hostname + " - Status";
+
 //get vaidity
 /*
     var usr = document.getElementById('user').innerHTML
@@ -80,28 +85,31 @@ $(endif)
     var getvalid = url+usr+"&session="+SessionName
     document.getElementById('exp').src = getvalid;
 */
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-}
+        const toggleSwitch = document.querySelector(
+            '.theme-switch input[type="checkbox"]'
+        );
+        const currentTheme = localStorage.getItem("theme");
 
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-    else {        document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-    }    
-}
+        if (currentTheme) {
+            document.documentElement.setAttribute("data-theme", currentTheme);
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+            if (currentTheme === "dark") {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute("data-theme", "dark");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+                localStorage.setItem("theme", "light");
+            }
+        }
+
+        toggleSwitch.addEventListener("change", switchTheme, false);
 </script>
 </body>
 </html>
